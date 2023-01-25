@@ -1,0 +1,98 @@
+:root {
+  --primary-color: #494953;
+  --secondary-color: #6a7efc;
+  --tertiary-color: #edf2f6;
+  --fourth-color: #ff5656;
+  --warning-successful: #c3f584;
+  --warning-pending: #ffd271;
+  --warning-error: #f65c78;
+  --warning-discarded: #fff3af;
+  --font-buttons: "Montserrat", sans-serif;
+}
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--primary-color);
+}
+.div-product {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  background-color: var(--secondary-color);
+  height: 10rem;
+  font-family: var(--font-buttons);
+  color: var(--tertiary-color);
+  font-size: 3rem;
+   border: 1px solid var(--primary-color);
+}
+a{
+    font-family: var(--font-buttons);
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--tertiary-color);
+}
+span{
+    margin: 1rem;
+}
+ 
+/*form*/
+label {
+    color: white;
+    font-family: var(--font-buttons);
+    font-size: 2rem;
+    margin-left: 3rem;
+  }
+
+  .form { 
+    margin-top: 3rem;
+    width: 100%;
+    font-family: var(--font-buttons);
+  }
+   input[type="text"] {
+    width: 30rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    font-size: 1.6rem;
+  }
+  select {
+    width: 10rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    font-size: 1.6rem;
+  }
+  option {
+    font-size: 1.6rem;
+  }
+  h1{
+    font-size:2rem;
+    font-family: var(--font-buttons);
+    color: var(--tertiary-color);
+
+  }
+    input[type="submit"] {
+    text-align: center;
+  
+    margin: 1rem;
+    font-family: var(--font-buttons);
+    font-size: 1.6rem;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 0.5rem;
+    width: 8.5rem;
+    height: 2.5rem;
+    border: none;
+  }
+   

@@ -1,0 +1,16 @@
+
+    {% extends "carrito/base.html" %}
+    {% block content %}
+        
+{% for productlist in object_list %}
+<div class="div-product">
+<span>{{ productlist.creation_date }} {{ productlist.product }} categoria: {{ productlist.type }} </span>
+ 
+<span>{{ productlist.client }}</span>
+ 
+{% endfor %}
+</div>
+
+<br>
+<span><a href="nuevo/"><button>Agregar nuevo</button></a></span>
+ {% endblock content %}

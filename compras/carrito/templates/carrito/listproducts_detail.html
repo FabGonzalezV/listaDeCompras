@@ -1,0 +1,12 @@
+{% extends "carrito/base.html" %}
+{% block content %}
+<div class="div-product">
+    <span> {{ object.creation_date }} {{ object.product }} {{ object.type }}</span> 
+    <span> {{ object.client }} </span>
+</div>
+
+<span><a href="{{ object.get_absolute_url }}/update">Actualizar</a> </span> 
+<span> <a href="{{ object.get_absolute_url }}/delete">Eliminar</a></span> 
+<span><a href="nuevo/"><button>Seguir agregando</button></a></span>
+<span><a href="/products-list/"><button>finalizar</button></a></span> 
+{% endblock content %}

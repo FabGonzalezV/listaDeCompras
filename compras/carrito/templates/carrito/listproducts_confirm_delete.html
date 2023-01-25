@@ -1,0 +1,11 @@
+{% extends "carrito/base.html" %}
+{% block content %}
+<h1>Elimina de la lista "{{ object.product }} -  {{ object.creation_date }}"</h1>
+<div class="form">
+    <form method=post >{% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Eliminar">
+    </form>
+</div>
+
+{% endblock content %}
