@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView, CreateView
 from . import models
@@ -22,4 +22,6 @@ class ProductsListCreateView(CreateView):
     model = models.ListProducts
     fields = "__all__"     
 
- 
+@login_required
+def products(request):
+    return render(request, 'carrito/base.html')
