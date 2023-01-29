@@ -6,20 +6,21 @@ import uuid
 
 # Create your models here.
 class ListProducts(models.Model): 
-    _id_list = models.AutoField(primary_key=True) 
+    id = models.AutoField(primary_key=True) 
     CATEGORY =(
-        ('V', 'verdura'),
-        ('L', 'Lacteo'),
-        ('F', 'Fruta'),
-        ('CR', 'Cereal'),
-        ('C', 'Carnes'),
-        ('O', 'otros'), 
+        ('Verdura', 'Verdura'),
+        ('Lacteo', 'Lacteo'),
+        ('Fruta', 'Fruta'),
+        ('Cereal', 'Cereal'),
+        ('Carnes', 'Carnes'),
+        ('Otro', 'Otro'), 
     )
-    type = models.CharField(choices= CATEGORY, default='O', max_length=100, blank=True, help_text="tipo producto")
+    type = models.CharField(choices= CATEGORY, default='Otro', max_length=100, blank=True, help_text="tipo producto")
     product = models.CharField(max_length=200,name='product')   
     client = models.ForeignKey(User, on_delete=models.CASCADE, default="")
     creation_date = models.DateField(null=True, blank=True, default=datetime.today)
-    
+    status_delete = models.BooleanField(default=False)
+
     def __str__(self):
         
         return '%s (%s)' % (self.product,self.creation_date) 
