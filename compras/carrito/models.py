@@ -18,7 +18,8 @@ class ListProducts(models.Model):
     type = models.CharField(choices= CATEGORY, default='Otro', max_length=100, blank=True, help_text="tipo producto")
     product = models.CharField(max_length=200,name='product')   
     client = models.ForeignKey(User, on_delete=models.CASCADE, default="")
-    creation_date = models.DateField(null=True, blank=True, default=datetime.today)
+    date_created = models.DateTimeField(auto_now_add=True)
+    last_update = models.DateTimeField(auto_now=True)
     status_delete = models.BooleanField(default=False)
 
     def __str__(self):

@@ -41,7 +41,8 @@
                         <th>IdProducto</th>
                         <th>Producto</th>
                         <th>Categoría</th>
-                        <th>Fecha</th>
+                        <th>Fecha de creación</th>
+                        <th>Fecha de modificación</th>
                         <th colspan="2">Opciones</th>
                     </tr>
                 </thead>
@@ -51,7 +52,8 @@
                         <td>{{p.id}}</td>
                         <td>{{p.product}}</td>
                         <td>{{p.type}}</td>
-                        <td>{{p.creation_date}}</td>
+                        <td>{{p.date_created | date:"d-m-Y h:m"}}</td>
+                        <td>{{p.last_update | date:"d-m-Y h:m"}}</td>
                         <td><a href="edicionProducto/{{p.id}}" class="btn btn-info">Editar</a></td>
                         <td><a href="eliminarProducto/{{p.product}}" class="btn btn-danger">Eliminar</a></td>
                     </tr>
